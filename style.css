@@ -1,0 +1,71 @@
+html, body
+{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 9pt;
+    height: 100%;
+    /*background-color: #333;*/
+}
+
+a
+{
+    color: white;
+}
+
+h1
+{
+    color: #333333;
+}
+
+h5
+{
+    font-family: 'BenchNine';
+    font-size: 1.5em;
+    color: #888;
+}
+
+.ui fluid container
+{
+    /*background-color: rgba(255,255,255,0.5);*/
+    max-width: 900px;
+    height: 100%;
+    overflow-y: hidden;
+    border: solid black 10px;
+    
+}
+
+.page-header
+{
+    position: relative;
+    padding: 100px 0px 0px 0px;
+    background-image: url(img/headerimg.jpg);
+    background-clip: border-box;
+    background-size: cover;
+    background-position: center;
+    /*background-blend-mode: overlay;*/
+    background-color: darkgray;
+    border: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrap1
+{
+    width: 100%;
+    border-left: solid crimson 10px;
+    padding: 1px 3px 1px 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-pills
+{
+    font-family: 'BenchNine';
+    font-size: 1.3em;
+    background-color: #39415f;
+    padding: 0px;
+}
+
+
+
+
+
+
