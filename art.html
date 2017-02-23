@@ -3,8 +3,11 @@
 	<head>
     <title>My Art</title>
 	</head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css">		
-    <link rel="stylesheet" type="text/css" href="style.css">	<link href='//fonts.googleapis.com/css?family=BenchNine' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.css">		
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='//fonts.googleapis.com/css?family=BenchNine' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.js"></script>
     
 	<body>
         
@@ -12,13 +15,11 @@
             
             <div class="ui secondary pointing menu">
                 <a class="item" href="/">HOME</a>
-                <a class="item" href="/about">ABOUT</a>
-                <a class="item" href="/games">GAMES</a>
-                <a class="active item" href="/art">ART</a>
-                <a class="item" href="/other">OTHER</a>
+                <a class="item" href="/about.html">ABOUT</a>
+                <a class="item" href="/games.html">GAMES</a>
+                <a class="active item" href="/art.html">ART</a>
+                <a class="item" href="/other.html">OTHER</a>
             </div>
-            
-            <div class="ui basic segment">
                 
                 <!--COMPUTER VIEW-->
                 <div class="ui equal width grid">
@@ -44,64 +45,66 @@
                     </div> 
                 </div>
                 
-            </div>
+                <!--MODAL SETUP-->
+                <div id="myModal" class="artModal" onclick="closeModal()">
+                    <!--Close Button-->
+                    <i class="close icon" onclick="closeModal()"></i>
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="modalimg">
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
         
-		  <div class="footer">
-              <tnc>Tan Yan Ling &copy 2017</tnc>
-		  </div>
+        <div class="footer">
+            <tnc>Tan Yan Ling &copy 2017</tnc>
+		</div>
         
         </div>
         
         <!--JAVASCRIPT FOR PICTURES-->
         <script type="text/javascript">
-        var art = '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/0.jpg" id="art">\
-                  </div>' + 
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/1.jpg" id="art">\
-                  </div>' +
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/2.jpg" id="art">\
-                  </div>' + 
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/3.jpg" id="art">\
-                  </div>' +
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/4.jpg" id="art">\
-                  </div>' + 
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/5.jpg" id="art">\
-                  </div>' +
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/6.jpg" id="art">\
-                  </div>' + 
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/7.jpg" id="art">\
-                  </div>' + 
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/8.jpg" id="art">\
-                  </div>' + 
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/9.jpg" id="art">\
-                  </div>' + 
-                  '<div class="ui card">\
-                    <img src="/img/art/buffer.jpg">\
-                    <img src="/img/art/10.jpg" id="art">\
-                  </div>';
+            function genCard(num, name, date){
+                return '<div class="ui card"><img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/'+num+'.jpg" class="art" onclick="showModal(this, \'modalimg\', \''+name+'\', \''+date+'\')">\
+                  </div>'
+            }
+            
+            var digitalart = genCard(0, 'Kinesis', 'Jan 2017')+
+                genCard(1, 'MapleStory Secret Santa 2016', 'Dec 2016')+
+                genCard(2, 'Pokemon Sun and Moon Countdown: Day 50', 'Nov 2016')+
+                genCard(3, 'Memories of the future', 'Nov 2016')+
+                genCard(4, 'Get Jinxed!', 'Jun 2016')+
+                genCard(5, 'dogs on the house', 'Mar 2016')+
+                genCard(6, 'Chibi Lina and Rylai', 'Aug 2015')+
+                genCard(7, 'Sanguine', 'Dec 2014')+
+                genCard(8, 'Black Rock Shooter', 'Mar 2014')+
+                genCard(9, 'The Singer', 'Jul 2013')+
+                genCard(10, 'Serperior', 'Sep 2012');
         
-        document.getElementById('comp').innerHTML = art;
-        document.getElementById('tab').innerHTML = art;
-        document.getElementById('mob').innerHTML = art;
+        document.getElementById('comp').innerHTML = digitalart;
+        document.getElementById('tab').innerHTML = digitalart;
+        document.getElementById('mob').innerHTML = digitalart;
+            
+            var modal = document.getElementById('myModal');
+            var captionText = document.getElementById('caption');
+            
+            function showModal(_this, id, title, date) {
+                var modalimg = document.getElementById(id);
+                modal.style.display = "block";
+                modalimg.src = _this.src;
+                captionText.innerHTML = "<tnc>"+title+" | "+date+"</tnc>";
+            }
+
+            // When the user clicks on (x), close the modal
+            function closeModal() { 
+                modal.style.display = "none";
+            }    
+            
+            $(document).keyup(function(e) {
+                if (e.keyCode == 27) {
+                    modal.style.display = "none"
+                }
+            });
         </script>
         
     </body>
