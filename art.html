@@ -21,17 +21,17 @@
                 <a class="item" href="/other.html">OTHER</a>
             </div>
                 
-                <div class="ui equal width grid">
+                <div class="ui equal width grid" style="min-height: calc(100vh - 60px);">
                     
                     <!--COMPUTER VIEW-->
                     <div class="computer only three wide column">
                         <div class="ui secondary vertical menu">
-                            <a class="active item">Digital Art</a>
+                            <a class="active item" id="menuDA" onclick="changeMenu(this.id)">Digital Art</a>
                             <div class="item">
                                 Traditional Art
                                 <div class="menu">
-                                    <a class="item">Marker</a>
-                                    <a class="item">Watercolour</a>
+                                    <a class="item" id="menuTAM" onclick="changeMenu(this.id)">Marker</a>
+                                    <a class="item" id="menuTAW" onclick="changeMenu(this.id)">Watercolour</a>
                                 </div>
                             </div>
                         </div>
@@ -44,12 +44,12 @@
                 <!--TABLET VIEW-->
                     <div class="tablet only three wide column">
                         <div class="ui secondary vertical menu">
-                            <a class="active item">Digital Art</a>
+                            <a class="active item" id="menuDA" onclick="changeMenu(this.id)">Digital Art</a>
                             <div class="item">
                                 Traditional Art
                                 <div class="menu">
-                                    <a class="item">Marker</a>
-                                    <a class="item">Watercolour</a>
+                                    <a class="item" id="menuTAM" onclick="changeMenu(this.id)">Marker</a>
+                                    <a class="item" id="menuTAW" onclick="changeMenu(this.id)">Watercolour</a>
                                 </div>
                             </div>
                         </div>
