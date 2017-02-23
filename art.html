@@ -12,39 +12,97 @@
             
             <div class="ui secondary pointing menu">
                 <a class="item" href="/">HOME</a>
-                <a class="active item" href="/about">ABOUT</a>
+                <a class="item" href="/about">ABOUT</a>
                 <a class="item" href="/games">GAMES</a>
-                <a class="item" href="/art">ART</a>
+                <a class="active item" href="/art">ART</a>
                 <a class="item" href="/other">OTHER</a>
             </div>
             
             <div class="ui basic segment">
-                <div class="ui grid">
-                    <div class="four wide column">
-                        <div class="ui card">
-                            <div class="ui slide masked reveal image">
-                                <img src="/img/headerimg.jpg">
-                            </div>
-                            <div class="content">
-                                <a class="header">Arcane River</a>
-                                <div class="meta">
-                                    <span class="date">Dec 2016</span>
-                                </div>
-                            </div>
+                
+                <!--COMPUTER VIEW-->
+                <div class="ui equal width grid">
+                    <div class="computer only column">
+                        <div class="ui five cards" id="comp">
                         </div>
-                    <div class="four wide column">
-                    </div>
-                    <div class="four wide column">
-                    </div>
-                    <div class="four wide column">
-                    </div>
+                    </div> 
                 </div>
+                
+                <!--TABLET VIEW-->
+                <div class="ui equal width grid">
+                    <div class="tablet only column">
+                        <div class="ui four cards" id="tab">
+                        </div>
+                    </div> 
+                </div>
+                
+                <!--MOBILE VIEW-->
+                <div class="ui equal width grid">
+                    <div class="mobile only column">
+                        <div class="ui three cards" id="mob">
+                        </div>
+                    </div> 
+                </div>
+                
             </div>
         
-		  <div class="ui vertical footer segment">
-              <tnc>&copy 2017</tnc>
+		  <div class="footer">
+              <tnc>Tan Yan Ling &copy 2017</tnc>
 		  </div>
         
         </div>
+        
+        <!--JAVASCRIPT FOR PICTURES-->
+        <script type="text/javascript">
+        var art = '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/0.jpg" id="art">\
+                  </div>' + 
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/1.jpg" id="art">\
+                  </div>' +
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/2.jpg" id="art">\
+                  </div>' + 
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/3.jpg" id="art">\
+                  </div>' +
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/4.jpg" id="art">\
+                  </div>' + 
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/5.jpg" id="art">\
+                  </div>' +
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/6.jpg" id="art">\
+                  </div>' + 
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/7.jpg" id="art">\
+                  </div>' + 
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/8.jpg" id="art">\
+                  </div>' + 
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/9.jpg" id="art">\
+                  </div>' + 
+                  '<div class="ui card">\
+                    <img src="/img/art/buffer.jpg">\
+                    <img src="/img/art/10.jpg" id="art">\
+                  </div>';
+        
+        document.getElementById('comp').innerHTML = art;
+        document.getElementById('tab').innerHTML = art;
+        document.getElementById('mob').innerHTML = art;
+        </script>
+        
     </body>
 </html>

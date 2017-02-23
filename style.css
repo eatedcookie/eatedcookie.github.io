@@ -34,6 +34,13 @@ img{
     width: 100%;
 }
 
+img#art
+{
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+}
+
 .page-header
 {
     position: relative;
@@ -60,8 +67,9 @@ img{
 .footer
 {
     width: inherit;
-    background-color: aqua;
     text-align: center;
+    position: fixed;
+    bottom: 0px;
 }
 
 
