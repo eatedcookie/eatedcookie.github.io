@@ -21,24 +21,57 @@
                 <a class="item" href="/other.html">OTHER</a>
             </div>
                 
-                <!--COMPUTER VIEW-->
                 <div class="ui equal width grid">
+                    
+                    <!--COMPUTER VIEW-->
+                    <div class="computer only three wide column">
+                        <div class="ui secondary vertical menu">
+                            <a class="active item">Digital Art</a>
+                            <div class="item">
+                                Traditional Art
+                                <div class="menu">
+                                    <a class="item">Marker</a>
+                                    <a class="item">Watercolour</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="computer only column">
                         <div class="ui five cards" id="comp">
                         </div>
                     </div> 
-                </div>
                 
                 <!--TABLET VIEW-->
-                <div class="ui equal width grid">
+                    <div class="tablet only three wide column">
+                        <div class="ui secondary vertical menu">
+                            <a class="active item">Digital Art</a>
+                            <div class="item">
+                                Traditional Art
+                                <div class="menu">
+                                    <a class="item">Marker</a>
+                                    <a class="item">Watercolour</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tablet only column">
                         <div class="ui four cards" id="tab">
                         </div>
                     </div> 
-                </div>
                 
                 <!--MOBILE VIEW-->
-                <div class="ui equal width grid">
+                    <div class="mobile only four wide column">
+                        <div class="ui compact secondary vertical menu">
+                            <a class="active item" id="menuDA" onclick="changeMenu(this.id)">Digital Art</a>
+                            <div class="item">
+                                Traditional Art
+                                <div class="menu">
+                                    <a class="item" id="menuTAM" onclick="changeMenu(this.id)">Marker</a>
+                                    <a class="item" id="menuTAW" onclick="changeMenu(this.id)">Watercolour</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mobile only column">
                         <div class="ui three cards" id="mob">
                         </div>
@@ -85,6 +118,45 @@
         document.getElementById('tab').innerHTML = digitalart;
         document.getElementById('mob').innerHTML = digitalart;
             
+            var markerart = genCard(11, 'Double Black', 'Dec 2016')+
+                genCard(12, 'LiEat', 'May 2016')+
+                genCard(13, 'Secret Shownight', 'May 2016')+
+                genCard(14, 'That Garden Photoshoot', 'Mar 2016')+
+                genCard(15, 'I have twenty-three tiny wishes...', 'Jul 2015')+
+                genCard(16, 'Rydia of Mist', 'Jul 2015');
+            
+            var waterart = genCard(17, 'V', 'Feb 2017')+
+                genCard(18, 'Q', 'Jan 2017')+
+                genCard(19, 'Amnesia World: Ukyo', 'Jan 2017')+
+                genCard(20, 'You can count on me...partner', 'Jan 2017')+
+                genCard(21, 'Velvet Bouncer', 'Dec 2016')+
+                genCard(22, 'Flower Shop Boy', 'Dec 2016')+
+                genCard(23, 'Arcane Thief', 'Sep 2016')+
+                genCard(24, 'Im a real Pokemon trainer', 'Aug 2016')+
+                genCard(25, 'Homucifer', 'Jul 2016')+
+                genCard(26, 'Feymarch', 'Jul 2016')+
+                genCard(27, 'Jodariel', 'Jun 2016')+
+                genCard(28, 'FFXIV: Yshtola', 'Jun 2016')+
+                genCard(29, 'heavy metal to drown out the heavy thoughts', 'May 2016')+
+                genCard(30, 'Miraculous Marinette', 'May 2016');
+            
+            function changeView(id){
+                if(id == "menuDA"){ var content = digitalart;}
+                else if(id == "menuTAM"){ var content = markerart;}
+                else{ var content = waterart;}
+                document.getElementById('comp').innerHTML = content;
+                document.getElementById('tab').innerHTML = content;
+                document.getElementById('mob').innerHTML = content;
+            }
+            
+            function changeMenu(id){
+                document.getElementById('menuDA').className = "item";
+                document.getElementById('menuTAM').className = "item";
+                document.getElementById('menuTAW').className = "item";
+                document.getElementById(id).className = "active item";
+                changeView(id);
+            }
+            
             var modal = document.getElementById('myModal');
             var captionText = document.getElementById('caption');
             
@@ -98,13 +170,14 @@
             // When the user clicks on (x), close the modal
             function closeModal() { 
                 modal.style.display = "none";
-            }    
+            }  
             
             $(document).keyup(function(e) {
                 if (e.keyCode == 27) {
                     modal.style.display = "none"
                 }
             });
+            
         </script>
         
     </body>
