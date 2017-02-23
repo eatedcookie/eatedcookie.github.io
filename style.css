@@ -1,10 +1,10 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css");
-@import url("//fonts.googleapis.com/css?family=BenchNine");
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css");
+// @import url("//fonts.googleapis.com/css?family=BenchNine");
 
 html, body
 {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    font-size: 14pt;
+    //font-size: 14pt;
     height: 100%;
 }
 
