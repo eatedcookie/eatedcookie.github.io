@@ -8,30 +8,20 @@ html, body
     height: 100%;
 }
 
-a
+a, a:link, a:visited
 {
     font-size: 0.9em;
     color: #20B2AA;
 }
 
-/* unvisited link */
-a:link {
-    color: red;
-}
-
-/* visited link */
-a:visited {
-    color: green;
-}
-
-/* mouse over link */
-a:hover {
+a:hover
+{
     color: hotpink;
 }
 
-/* selected link */
-a:active {
-    color: blue;
+a:active
+{
+    color: white;
 }
 
 h1
