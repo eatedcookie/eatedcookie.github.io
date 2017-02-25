@@ -10,7 +10,8 @@ html, body
 
 a
 {
-    color: white;
+    font-size: 0.9em;
+    color: lightseagreen;
 }
 
 h1

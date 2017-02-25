@@ -64,8 +64,8 @@
                                         Lead Artist
                                     </div>
                                     <div class="description">
-                                        <p>a simple PvP bullet hell game</p>
-                                        <p>Official Site | Google Play</p>
+                                        <p>a simple PvP bullet hell mobile game</p>
+                                        <p><a href="http://nusgdg.github.io/pew/">Official Site</a> | <a href="https://play.google.com/store/apps/details?id=com.nusgdg.pew&hl=en">Google Play</a></p>
                                     </div>
                                     <div class="extra">
                                         <div class="ui accordion">
@@ -73,7 +73,9 @@
                                                 <i class="dropdown icon"></i>    Screenshots
                                             </div>
                                             <div class="content">
-                                                <p class="transition hidden">Insert screenshots here</p>
+                                                <div class="ui small images">
+                                                    <img class="ui image" src="img/pew1.webp"><img class="ui image" src="img/pew2.webp"><img class="ui image" src="img/pew3.webp">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -84,15 +86,15 @@
                                     <img src="/img/momogacha.png">
                                 </div>
                                 <div class="content">
-                                    <a class="header">Header</a>
+                                    <h4>MomoGacha</h4>
                                     <div class="meta">
-                                        <span>Description</span>
+                                        Assistant Producer, Artist
                                     </div>
                                     <div class="description">
-                                        <p></p>
+                                        <p>a virtual pet mobile game where you can feed, play with, then send your pet off to battle!</p>
                                     </div>
                                     <div class="extra">
-                                        Additional Details
+                                        <a href="https://cdn.filestackcontent.com/gAu7H6dSQaGTkCfMUU6R">Download</a>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +143,70 @@
                                         <p>Observe the life of the ordinary person as he goes on about his mundane daily routine. Spice up his life by forcing him to experience unexpected outcomes from what he is accustomed to. There are tons of things you can do! After all, you are the mischievous poltergeist! There is only one rule: Don’t get caught!</p>
                                     </div>
                                     <div class="extra">
-                                        Additional Details
+                                        <div class="ui accordion">
+                                            <div class="title">
+                                                <i class="dropdown icon"></i>    Screenshots
+                                            </div>
+                                            <div class="content">
+                                                <p class="transition hidden">Insert screenshots here</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--dummy column to hold the content for school games-->
+                    <div class="column" id="sch" style="display: none;">
+                        <div class="ui small message">
+                            <div class="header">Global Game Jam</div>
+                            <p>Games I've made with others during the 48 hour Global Game Jam</p>
+                        </div>
+                        
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/img/shrink.jpg">
+                                </div>
+                                <div class="content">
+                                    <h4>Shrink Simulator 2015</h4>
+                                    <div class="meta">Designer, Artist</div>
+                                    <div class="description">
+                                        <p>Play as a psychiatrist and give people words of "wisdom". Think you give good advice? What if your advice determined the fate of the world??? CAN YOU DO IT? ARE YOU THE BEST SHRINK 2015?!</p>
+                                        <p>Official Site</p>
+                                    </div>
+                                    <div class="extra">
+                                        <div class="ui accordion">
+                                            <div class="title">
+                                                <i class="dropdown icon"></i>    Screenshots
+                                            </div>
+                                            <div class="content">
+                                                <p class="transition hidden">Insert screenshots here</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/img/pierce.jpg">
+                                </div>
+                                <div class="content">
+                                    <h4>Pierce's Morning Routine</h4>
+                                    <div class="meta">Artist</div>
+                                    <div class="description">
+                                        <p>Observe the life of the ordinary person as he goes on about his mundane daily routine. Spice up his life by forcing him to experience unexpected outcomes from what he is accustomed to. There are tons of things you can do! After all, you are the mischievous poltergeist! There is only one rule: Don’t get caught!</p>
+                                    </div>
+                                    <div class="extra">
+                                        <div class="ui accordion">
+                                            <div class="title">
+                                                <i class="dropdown icon"></i>    Screenshots
+                                            </div>
+                                            <div class="content">
+                                                <p class="transition hidden">Insert screenshots here</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -158,13 +223,12 @@
         </div>
         
         <script type="text/javascript">
-            // INITIALISE ACCORDION
-            $('.ui.accordion').accordion();
             
             // INITIALISE DEFAULT MAIN CONTENT
             var gdggames = document.getElementById('nusgdg').innerHTML;
             var ggjgames = document.getElementById('ggj').innerHTML;
             document.getElementById('maincontent').innerHTML = gdggames;
+            $('.ui.accordion').accordion();
             
             //MAKE SIDEMENU FANCY
             function changeView(id){
@@ -176,6 +240,7 @@
                 }
                 //else{ var content = waterart;}
                 document.getElementById('maincontent').innerHTML = content;
+                $('.ui.accordion').accordion();
             }
             
             function changeMenu(id){
