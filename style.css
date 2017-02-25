@@ -18,6 +18,13 @@ h1
     color: #333333;
 }
 
+h4
+{
+    font-family: 'BenchNine';
+    font-size: 1.5em;
+    color: black;
+}
+
 h5
 {
     font-family: 'BenchNine';
